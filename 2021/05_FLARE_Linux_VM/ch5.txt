@@ -1,0 +1,94 @@
+0x45 0x34 0x51 
+
+sausages.txt
+	rol 65
+	2nd byte of pass is 0x34
+
+spaghetti.txt
+	rotate left 65
+	In the FLARE language "spaghetti" is "c3BhZ2hldHRp".
+	multiple base64 layers c3BhZ2hldHRp == spaghetti
+
+unagi.txt
+	plain text
+	first byte pass is 0x45
+
+raisins.txt
+	3rd byte, joke
+
+reeses.txt
+	We LOVE "Reese's", they are great for everything! They are amazing in ice-cream and they even work as a key for XOR encoding.
+
+bananna_chips.txt << decoded with xor Reese's
+	Are you good at maths? We love maths at FLARE! We use this formula a lot to decode bytes: "ENCODED_BYTE + 27 + NUMBER1 * NUMBER2 - NUMBER3"
+	jeebus fuckin ....
+	NUMBER1=2
+	NUMBER2=3
+	NUMBER3=37
+	27 + 6 - 37 = -4
+
+iced_coffee.txt
+	cbor
+
+instand_noodles.txt
+	cbor
+
+ice_cream.txt
+If this challenge is too difficult and you want to give up or just in case you got hungry, what about baking some muffins? Try this recipe:
+0 - Cinnamon
+1 - Butter 150gr
+2 - Lemon 1/2
+3 - Eggs 3
+4 - Sugar 150gr
+5 - Flour 250gr
+6 - Milk 30gr
+7 - Icing sugar 10gr
+8 - Apple 100gr
+9 - Raspberries 100gr
+
+Mix 0 to 9 and bake for 30 minutes at 180Â°C.
+	cbor encoding???
+	{
+	    "type": "Buffer",
+	    "data": [
+106, 36, 120, 108, 109, 119, 36, 103, 108, 101, 112, 112, 105, 231, 157, 183, 218, 237
+	    ]
+	}
+
+natillas.txt
+	cbor encoding?
+	{
+	    "type": "Buffer",
+	    "data": [
+	        231,
+	        157,
+	        183,
+	        218,
+	        237
+	    ]
+	}
+	1  2  3  4  5  6  7  8  9  10 11 12 13 14  
+	45 34 51 35 64 36 66 60 73 34 6c 44 35 49
+	E  4  Q  5  MS 6  f  '  ?? K
+     x  x  x  x  x  x  x  x  x  x     x  x     
+
+
+             .daquiri
+cat /usr/bin/dot   <<<< literal word dot not "."...was hung up so long on the .fipscheck.hmac file 
+
+https://gchq.github.io/CyberChef/#recipe=HMAC(%7B'option':'Hex','string':''%7D,'MD2'/disabled)CBOR_Decode(/disabled)To_Hex('None',0/disabled)Rotate_left(1,false/disabled)From_Decimal('Comma',false/disabled)SUB(%7B'option':'Hex','string':'4'%7D/disabled)HMAC(%7B'option':'Hex','string':'45%2034%2051%2035%2064%2036%2066%2060%2073%2034%2070%2044%2035%204b'%7D,'RIPEMD128'/disabled)From_Hex('Auto'/disabled)From_Hex('Auto')AES_Decrypt(%7B'option':'UTF8','string':'Sheep%20should%20sleep%20in%20a%20shed15.2'%7D,%7B'option':'UTF8','string':'PIZZA00000000000'%7D,'CBC','Hex','Raw',%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D/disabled)RC4(%7B'option':'UTF8','string':'493513'%7D,'Latin1','Latin1'/disabled)Bifid_Cipher_Decode('eggs'/disabled)Vigen%C3%A8re_Decode('microwaves'/disabled)XOR(%7B'option':'UTF8','string':'Reese%5C's'%7D,'Standard',false/disabled)From_Base64('A-Za-z0-9%2B/%3D',true/disabled)ROT13(true,true,false,13/disabled)&input=NDUgMzQgNTEgMzUgNjQgMzYgNjYgNjAgNzMgMzQgNmMgNDQgMzUgNDk
+
+[U]don noodles   plain<< serves as the encoding for next level 
+[S]trawberries   rol 1<< clue to next encoding, current encoding is previous
+[R]eese's        base 64
+[B]anana chips   xor Reese's
+[I]ce Cream 	  sub 4
+[N]atillas       RC4 "SREFBE"-> use the baking recipe for numbers = 493513
+[D]onuts		  bifid, eggs
+[O]melettes      vigenere decode, microwaves
+[T]acos	       aes "Sheep should sleep in a shed15.2" PIZZA00000000000
+
+
+Spain           4 7  9       9  7  4
+Singapore       8 25 19      19 25 6
+Indonesia       1 2  0       0  2  1
